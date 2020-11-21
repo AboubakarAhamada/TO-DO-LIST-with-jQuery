@@ -49,9 +49,14 @@ $('input').keypress(function(event){
         var task = $('input').val();
         //console.log(task);
         // We add ther entered task in the list
-        $('ul').append("<li><span>- </span>"+ task+"</li>");
+        $('ul').append("<li><span class='delete'><i class='fa fa-trash' aria-hidden='true'></i> </span>"+ task+"</li>");
         //we clean the text input field
         $('input').val("");
 
     }
+})
+
+//Toggling the input form
+$("#plus").click(function(){
+    $("input").fadeToggle();
 })
